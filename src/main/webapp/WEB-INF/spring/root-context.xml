@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="supervisorStaffValidator" class="com.nirali.spring.validator.SupervisorStaffValidator"></bean>
+	
+	<bean id="userDao" class="com.nirali.spring.dao.UserDAO" ></bean>
+	<bean id="employerDao" class="com.nirali.spring.dao.EmployerDAO" ></bean>
+	<bean id="studentDao" class="com.nirali.spring.dao.StudentDAO" ></bean>
+	<bean id="supervisorDao" class="com.nirali.spring.dao.SupervisorDAO" ></bean>
+	<bean id="adminDao" class="com.nirali.spring.dao.AdminDAO" ></bean>
+	<bean id="PersonValidator" class="com.nirali.spring.validator.PersonValidator"></bean>
+	<bean id="studentStaffValidator" class="com.nirali.spring.validator.StudentStaffValidator"></bean>
+	<bean id="EmployerValidator" class="com.nirali.spring.validator.EmployerValidator"></bean>
+	<bean id="AdminValidator" class="com.nirali.spring.validator.AdminValidator"></bean>
+	<bean id="availabilityValidator" class="com.nirali.spring.validator.AvailabilityValidator"></bean>
+	
+	
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="5000000" />
+	</bean>
+	
+	
+</beans>
